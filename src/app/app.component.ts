@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
+import { CombineLatestCounterComponent } from './combine-latest-counter/combine-latest-counter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  imports: [CombineLatestCounterComponent],
+  template: `
+    <app-combine-latest-counter></app-combine-latest-counter>
+  `,
+  styles: [`
+    :host {
+      display: block;
+    }
+  `],
 })
 export class AppComponent {
-  title = 'angular-nation-talk-20230908';
+  constructor(title: Title) {
+    title.setTitle('Angular Nation Talk')
+  }
 }
