@@ -30,10 +30,6 @@ const THREE_SECONDS = 3000
     :host {
       display: block;
     }
-
-    div {
-      padding: 0.25rem;
-    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { CombineLatestCounterComponent } from './combine-latest-counter/combine-latest-counter.component';
+import { RxjsControlPanelComponent } from './rxjs-control-panel/rxjs-control-panel.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CombineLatestCounterComponent],
+  imports: [CombineLatestCounterComponent, RxjsControlPanelComponent],
   template: `
-    <app-combine-latest-counter></app-combine-latest-counter>
+    <div>
+      <app-rxjs-control-panel></app-rxjs-control-panel>
+      <app-combine-latest-counter></app-combine-latest-counter>
+    </div>
   `,
   styles: [`
     :host {
       display: block;
+    }
+
+    div {
+      padding: 0.25rem;
     }
   `],
 })
